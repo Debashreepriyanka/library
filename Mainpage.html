@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Mainpage</title>
+    </head>
+    <body>
+        <style>
+             body{
+                background-color:#ff66a3;
+                 }
+        </style>
+        <h2 style="position: relative; text-align: center;color: white;">Dashboard</h2>
+        <a href='/create'style="color: white;">Create Task</a>
+        <table border='|' align='center'>
+            <tr>
+                <th>Bookname</th>
+                <th>Author</th>
+                <th>Published_date</th>
+                <th>Availability</th>
+                <th>Edit</th>
+                <th>Delete</th>
+                
+            </tr>
+            {% for x in d %}
+            <tr>
+                      <td>{{x.1}}</td>
+                      <td>{{x.2}}</td>
+                      <td>{{x.3}}</td>
+                      <td>{{x.4}}</td>
+                      <td><a href="edit/{{x.0}}">Edit</a></td>
+                      <td><a href="delete/{{x.0}}">Delete</a></td>
+                  </tr>
+            {%endfor%}
+        </table>
+                
+      </body>
+</html>
+    

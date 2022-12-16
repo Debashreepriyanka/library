@@ -1,0 +1,38 @@
+<html>
+    <head>
+        
+        <title>Update|library</title>
+    </head>
+    <body>
+        <style>
+            body{
+               background-color:lightgreen;
+                }
+        </style>
+        <h2>Update Detail</h2>
+        <form method='POST' action='/update/{{d.0}}'>
+            <table border='|' align='center'>
+                <tr>
+                    <td>Bookname</td>
+                    <td><input type='text' name='b' value="{{d.1}}"/></td>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td><input type='text' name='a' value="{{d.2}}"/></td>
+                </tr>   
+                  <tr>
+                    <td>PublishedDate:</td>
+                    <td><input type='date' name='pdt' value="{{d.3}}"/></td>
+                </tr>
+                <tr>
+                    <td>Availability</td>
+                    <td><input type="text" name="avail" value="{{d.4}}"/></td>
+                </tr>
+                 <tr>
+                    <td><input type='submit' name='send' value="update"></td>
+                 </tr>
+            </table>
+        </form>
+    </body>
+    
+</html>
